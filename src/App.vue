@@ -13,6 +13,7 @@
             <p>Modal Content</p>
             <h1>{{ header }}</h1>
             <p>{{ text }}</p>
+            <p>Freedom is here</p>
       </Modal>
     </teleport>
     <teleport to=".modals" v-if="showModalTwo">
