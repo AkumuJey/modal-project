@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
     <input type="text" ref="name">
     <button @click="handleClick">click me</button>
-    <teleport to=".modals" v-if="showModal">
+    <div v-if="showModal">
       <Modal theme="" @close="toggleModal">
         <h1 contenteditable="true">Write here</h1>
         <template v-slot:links>
@@ -11,17 +11,16 @@
           <a href="#">Get Buddies</a>
         </template>
             <p>Modal Content</p>
-            <h1>{{ header }}</h1>
+            <!-- <h1>{{ header }}</h1> -->
             <p>{{ text }}</p>
-            <p>Freedom is here</p>
       </Modal>
-    </teleport>
-    <teleport to=".modals" v-if="showModalTwo">
+    </div>
+    <div v-if="showModalTwo">
       <Modal @close="toggleModalTwo">
         <h1 contenteditable="true">Sign up for chnage</h1>
         <p>For more updates on the change movement</p>
       </Modal>
-    </teleport>
+    </div>
     <p>Welcome...</p>
     <button @click="toggleModal">Show Modal</button>
     <button @click="toggleModalTwo">CHANGE</button>
@@ -38,7 +37,8 @@ export default {
     return {
       title: "MY First View App :)",
       showModal: false,
-      showModalTwo: false
+      showModalTwo: false,
+      text: "Wow"
     }
   },
   methods: {
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style>
-#app, #modals {
+#app, .modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
