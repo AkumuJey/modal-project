@@ -23,7 +23,7 @@
     </div>
     <p>Welcome...</p>
     <button @click="toggleModal">Show Modal</button>
-    <button @click="toggleModalTwo">CHANGE</button>
+    <button @click="toggleModalTwo">Change</button>
   </div>
 </template>
 
